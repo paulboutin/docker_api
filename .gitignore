@@ -61,7 +61,7 @@ typings/
 .next
 
 # ignore any data file generated durring development
-data/*
+data/*/
 
 # system files
 .DS_Store
