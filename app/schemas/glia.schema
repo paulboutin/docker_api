@@ -1,0 +1,51 @@
+ {
+    "definitions":{},
+    "$schema":"http://json-schema.org/draft-07/schema#",
+    "$id":"http://example.com/root.json",
+    "type":"object",
+    "title":"The Root Schema",
+    "required":["assets"],
+    "properties":{
+        "assets":{
+            "$id":"#/properties/assets",
+            "type":"array",
+            "title":"The Assets Schema",
+            "items":{
+                "$id":"#/properties/assets/items",
+                "type":"object",
+                "title":"The Items Schema",
+                "required":[
+                    "name",
+                    "versioned-name",
+                    "sri-hash"
+                ],
+                "properties":{
+                    "name":{
+                        "$id":"#/properties/assets/items/properties/name",
+                        "type":"string",
+                        "title":"The Name Schema",
+                        "default":"",
+                        "examples":["visitor-app"],
+                        "pattern":"^(.*)$"
+                    },
+                    "versioned-name":{
+                        "$id":"#/properties/assets/items/properties/versioned-name",
+                        "type":"string",
+                        "title":"The Versioned-name Schema",
+                        "default":"",
+                        "examples":["visitor-app.v2-4eaa4f6-default.cs"],
+                        "pattern":"^(.*)$"
+                    },
+                    "sri-hash":{
+                        "$id":"#/properties/assets/items/properties/sri-hash",
+                        "type":"string",
+                        "title":"The Sri-hash Schema",
+                        "default":"",
+                        "examples":["sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU"],
+                        "pattern":"^(.*)$"
+                    }
+                }
+            }
+        }
+    }
+ }
