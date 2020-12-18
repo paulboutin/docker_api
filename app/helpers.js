@@ -25,7 +25,7 @@ const helpers = {
             // Clear the chache we have an update
             console.log(cachedfs.getCacheKey(filePath));
             cachedfs.cache.reset();
-            callback();
+            callback(filePath);
         });
     }
 

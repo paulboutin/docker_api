@@ -61,6 +61,8 @@ typings/
 .next
 
 # ignore any data file generated durring development
+data/archive/
+data/tests/
 data/*/
 
 # system files
