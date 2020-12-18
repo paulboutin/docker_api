@@ -62,3 +62,6 @@ typings/
 
 # ignore any data file generated durring development
 data/*
+
+# system files
+.DS_Store
