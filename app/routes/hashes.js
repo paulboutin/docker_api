@@ -15,7 +15,7 @@ const setcors = cors({
 router.get("/:vendor", setcors, function (req, res, next) {
 
   console.log("Get hash for ", req.params.vendor);
-  const vendor = req.params.vendor;
+  const vendor = req.params.vendor.toLowerCase();
   const dataPath = `../data/${vendor}/hash.json`;
 
   // if Vendor dir doesnt exist return 404
@@ -36,10 +36,10 @@ router.get("/:vendor", setcors, function (req, res, next) {
 router.post('/:vendor', (req, res) => {
 
   const data = req.body;
-  const vendor = req.params.vendor;
+  const vendor = req.params.vendor.toLowerCase();
   const dataPath = `../data/${vendor}`;
   const dataFilePath = `${dataPath}/hash.json`;
-  const schemaPath = `../schemas/${vendor}.schema`;
+  const schemaPath = `./schemas/${vendor}.schema`;
   const dateParse = Date.parse(new Date());
   const dataPathArchive = `../data/archive/${vendor}-${dateParse}.json`;
 

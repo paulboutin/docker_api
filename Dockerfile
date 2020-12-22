@@ -1,6 +1,6 @@
 FROM node:12-slim
 
-# create a directory in your docker image
+# create working directory
 WORKDIR /app
 
 # install dependencies
@@ -13,7 +13,7 @@ RUN npm ci --only-production
 COPY ./app/ ./
 
 # Expose the port, on which your application is running
-EXPOSE 4000
+EXPOSE 3000
 
 # Run the code
-CMD [ "node", "./bin/www" ]
+ENTRYPOINT [ "node", "./bin/www" ]
